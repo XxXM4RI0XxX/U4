@@ -11,7 +11,7 @@ public class Menu {
     }
 
    static void display(){
-        MenuItem menuItem = new MenuItem("cola",Controller1);
+//        MenuItem menuItem = new MenuItem("cola",Controller1);
         menuItems.put(1,null);
         menuItems.put(5,null);
         System.out.println("MENU: ");

@@ -6,15 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedListLore.lore();
+        MyLinkedList MyLinkedList = new MyLinkedList();
 
-//        MyLinkedList linkedList = new MyLinkedList();
-//
-//        linkedList.add("Bola");
-//        linkedList.add("Juan");
-//        linkedList.add("Amdy");
-//        linkedList.addTo(1,"Koala");
-//        System.out.println(linkedList);
+        MyLinkedList.add("Buenas");
+        System.out.println("Arr[0]: "+MyLinkedList.get(0));
+        MyLinkedList.add("Aloha");
+        MyLinkedList.add("Bonjour");
+        System.out.println("Size: "+MyLinkedList.size());
+        System.out.println("Get [1]: "+MyLinkedList.get(1));
+        MyLinkedList.remove("Aloha");
+        MyLinkedList.remove(0);
+        System.out.println("Contains 'Bonjour'?: "+MyLinkedList.contains("Bonjour"));
+        MyLinkedList.add("Priviet");
+        MyLinkedList.indexOf("Priviet");
     }
 }
 
