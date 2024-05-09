@@ -6,7 +6,7 @@ public interface Controller {
 }
 
 /*
-Formas de impklementar una interfaz:
+Formas de implementar una interfaz:
  1. "implements"
     class A implements I {
     @Override

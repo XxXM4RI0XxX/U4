@@ -1,31 +1,37 @@
 package ManualArrayList.ManualLinkedList;
 
-import ManualArrayList.MyArrayList;
 import ManualArrayList.MyList;
 
 import java.util.Arrays;
 
 public class MyLinkedList implements MyList {
 
-    String[] elements = new String[0];
+    public Node<T> head;
+    public int size;
+    public MyLinkedList(){
+        this.head=null;
+        this.size=0;
+    }
 
-    @Override
-    public int size() {
-        return elements.length;
+    public static class Node<T>{
+        T value;
+        Node<T> next;
+        Node (T value){
+            this.value=value;
+            this.next=null;
+        }
     }
 
     @Override
-    public boolean add(String e) {
-        int newSize = size()+1;
-        String[] elements = new String[newSize];
-        //COPING ELEMENTS
-        for (int i=0; i < this.elements.length ; i++){
-            elements[i]=this.elements[i];
-        }
+    public int size() {
+        return size;
+    }
 
-        elements[newSize-1]= e;
-        this.elements = elements;
-        return true;
+    @Override
+    public boolean add(T e) {
+
+
+
     }
 
     public boolean addTo(int ind, String e){
