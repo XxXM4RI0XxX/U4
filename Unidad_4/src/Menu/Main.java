@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         LinkedList<String> lista = new LinkedList<>();
-        String ola = lista.element();
+        String ola = "wa";
         System.out.println(ola);
 
         Menu mainMenu = new Menu();
@@ -18,7 +18,6 @@ public class Main {
 
         mainMenu.display();
     }
-
 }
 
 class Controller1 implements Controller{
