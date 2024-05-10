@@ -1,14 +1,13 @@
 package ManualArrayList;
 
-public interface MyList {
-
+public interface MyList <T>{
     int size();
-    boolean add(String e);
-    String get(int i);
+    boolean add(T e);
+    T get(int i);
     boolean remove(int i);
-    boolean remove(String e);
-    int indexOf(String e);
-    boolean contains(String e);
+    boolean remove(T e);
+    int indexOf(T e);
+    boolean contains(T e);
 
 }
 

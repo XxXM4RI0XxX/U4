@@ -1,8 +1,7 @@
 package ManualArrayList.ManualLinkedList;
 
-import java.util.Arrays;
-
 public class MyLinkedList<T> implements MyList<T> {
+
     public Node<T> head;
     public int size;
 
@@ -43,7 +42,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public T get(T i) {
+    public T get(int i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
@@ -55,7 +54,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public boolean remove(T i) {
+    public boolean remove(int i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
@@ -93,6 +92,7 @@ public class MyLinkedList<T> implements MyList<T> {
         }
         return false;
     }
+
 
     @Override
     public int indexOf(T e) {

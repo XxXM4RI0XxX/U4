@@ -1,6 +1,6 @@
 package ManualArrayList;
 
-public class MyArrayList implements MyList{
+public class MyArrayList<T> implements MyList<T>{
 
     String[] elements = new String[0];
 
@@ -10,25 +10,23 @@ public class MyArrayList implements MyList{
     }
 
     @Override
-    public boolean add(String e) {
+    public boolean add(T e)  {
         int newSize = size()+1;
         String[] elements = new String[newSize];
         //COPING ELEMENTS
-        for (int i=0; i < this.elements.length ; i++){
-            elements[i]=this.elements[i];
-        }
+        System.arraycopy(this.elements, 0, elements, 0, this.elements.length);
 
-        elements[newSize-1]= e;
+        elements[newSize-1]= String.valueOf(e);
         this.elements = elements;
         return true;
     }
 
     @Override
-    public String get(int ind) {
-        String element=null;
+    public T get(int ind) {
+        T element=null;
         for(int i=0; i<this.elements.length ;i++){
             if(i==ind){
-                element=this.elements[i];
+                element=(T)this.elements[i];
             }
         }
         return element;
@@ -49,7 +47,7 @@ public class MyArrayList implements MyList{
     }
 
     @Override
-    public boolean remove(String e) {
+    public boolean remove(T e) {
         String[] elements = new String[size()-1];
 
         for(int i=0; i<this.elements.length ;i++) {
@@ -64,19 +62,19 @@ public class MyArrayList implements MyList{
     }
 
     @Override
-    public int indexOf(String e) {
+    public int indexOf(T e) {
         int ind=-1;
         for(int i=0; i<this.elements.length ;i++){
-            if(this.elements[i].contains(e))
+            if(this.elements[i].equals(e))
                 ind=i;
         }
         return ind;
     }
 
     @Override
-    public boolean contains(String e) {
-        for(int i=0; i<this.elements.length ;i++){
-            if(this.elements[i].contains(e)) {
+    public boolean contains(T e) {
+        for (String element : this.elements) {
+            if (element.equals(e)) {
                 return true;
             }
         }

@@ -14,7 +14,6 @@ public class Main {
         MyLinkedList.add("Bonjour");
         System.out.println("Size: "+MyLinkedList.size());
         System.out.println("Get [1]: "+MyLinkedList.get(1));
-        MyLinkedList.remove("Aloha");
         MyLinkedList.remove(0);
         System.out.println("Contains 'Bonjour'?: "+MyLinkedList.contains("Bonjour"));
         MyLinkedList.add("Priviet");
