@@ -43,7 +43,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public T get(int i) {
+    public T get(T i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
@@ -55,7 +55,7 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public boolean remove(int i) {
+    public boolean remove(T i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
